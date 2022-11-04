@@ -1,13 +1,22 @@
 // SPDX-License-Identifier: MIT
 // Here is the interface for ERC20.
-pragma solidity ^0.8.0;
-    interface IERC20miniproject {
-    function totalSupply() external view returns (uint);
-    function balanceOf(address account) external view returns (uint);
-    function transfer(address recipient, uint amount) external returns (bool);
-    function allowance(address owner, address spender) external view returns (uint);
-    function approve(address spender, uint amount) external returns (bool);
-    function transferFrom(address sender,address recipient, uint amount) external returns (bool);
-    event Transfer(address indexed from, address indexed to, uint value);
-    event Approval(address indexed owner, address indexed spender, uint value);
+pragma solidity ^0.8.0; //specify the Solidity version the compiler should use to build our code
+
+    interface IERC20miniproject { // Creation of the interface
+
+    function totalSupply() external view returns (uint); // Returns the amount of tokens in existence. This function is a getter and does not modify the state of the contract.
+
+    function balanceOf(address account) external view returns (uint); //Returns the amount of tokens owned by an address (account). This function is a getter and does not modify the state of the contract.
+
+    function transfer(address recipient, uint amount) external returns (bool); //Moves the amount of tokens from the function caller address (msg.sender) to the recipient address. This function emits the Transfer event defined later. It returns true if the transfer was possible.
+
+    function allowance(address owner, address spender) external view returns (uint);// The ERC-20 standard allows an address to give an allowance to another address to be able to retrieve tokens from it. This getter returns the remaining number of tokens that the spender will be allowed to spend on behalf of owner. This function is a getter and does not modify the state of the contract and should return 0 by default.
+
+    function approve(address spender, uint amount) external returns (bool); // Set the amount of allowance the spender is allowed to transfer from the function caller (msg.sender) balance. This function emits the Approval event. The function returns whether the allowance was successfully set.
+
+    function transferFrom(address sender,address recipient, uint amount) external returns (bool); //Moves the amount of tokens from sender to recipient using the allowance mechanism. amount is then deducted from the caller’s allowance. This function emits the Transfer event.
+
+    event Transfer(address indexed from, address indexed to, uint value); // This event is emitted when the amount of tokens (value) is sent from the from address to the to address.
+
+    event Approval(address indexed owner, address indexed spender, uint value); // This event is emitted when the amount of tokens (value) is approved by the owner to be used by the spender
 }
