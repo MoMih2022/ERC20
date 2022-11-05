@@ -8,7 +8,7 @@ contract ERC20 is IERC20miniproject { // Creation of the contract
     mapping(address => uint) public override balanceOf; // takes in the address of the owner and the money. We will use it to check the balance of the caller
     mapping(address => mapping(address => uint)) public override allowance; //takes the address of the sender, the second address takes in the address of the receiver and the last part is the amount that the sender has to send
     string public name = "tech4dev"; // name of the token
-    string public symbol = "T4D"; // Symbol of teh token
+    string public symbol = "T4D"; // Symbol of the token
     uint8 public decimals = 18; // number of decimals
 
     function transfer(address recipient, uint amount) external override returns (bool) { //Moves the amount of tokens from the function caller address (msg.sender) to the recipient address.  
