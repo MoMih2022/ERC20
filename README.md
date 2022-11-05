@@ -1,5 +1,5 @@
 # ERC20
-/*Link of the testnet: 
+/*Link of minting on different testnets: 
 1. https://testnet.bscscan.com/tx/0x005915f45936b92e8395ccd2af9643e3d17a0ccdae668221d8ceaf7be6a7f072
 2. https://goerli.etherscan.io/tx/0xd999ed73dc7cd28a97d636621918713b7a7101be5506a07940d9a34a24942a81
 3. https://mumbai.polygonscan.com/tx/0xd96183eba9e052eda04db387be8899beec82c2242e7981265189444416ca04af
